@@ -3,201 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carlos's Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        /* Global Styles */
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        /* Navigation Bar */
-        nav {
-            background-color: #333;
-            color: #fff;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        nav h1 {
-            margin: 0;
-        }
-
-        /* Main Content */
-        .container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 1rem;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        h2, h3 {
-            border-bottom: 2px solid #eee;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            margin-top: 2rem;
-        }
-    </style>
+    <title>Carlos Perez</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
+    <!-- Navbar -->
     <nav>
-        <h1>Carlos's Portfolio</h1>
+        <div class="container">
+            <h1>Carlos Perez</h1>
+            <p>Software Engineer</p>
+        </div>
     </nav>
 
     <!-- Main Content -->
     <div class="container">
-        <h2>About Me</h2>
-        <p>
-            Hello! I'm Carlos, a computer science major with a passion for coding and technology. 
-            I've always been fascinated by the intersection of technology and creativity. 
-            From building simple applications to understanding the complexities of algorithms, 
-            I strive to continue learning and growing in this ever-evolving field.
-        </p>
+        <!-- Introduction -->
+        <section>
+            <h2>About Me</h2>
+            <p>
+                Welcome to my personal website! I'm Carlos, a software engineering student with a passion for building intuitive and efficient software applications. Explore my projects, experiences, and skills below.
+            </p>
+        </section>
 
-        <h3>Skills & Interests</h3>
-        <p>
-            I have experience in Python, Java, and web development. I'm also interested in 
-            artificial intelligence, machine learning, and data science. Outside of coding, 
-            I enjoy reading, hiking, and playing video games.
-        </p>
+        <!-- Resume Section -->
+        <section>
+            <h2>Resume</h2>
+            <div class="text-center my-4">
+                <h3>Carlos Perez</h3>
+                <p>(832)-955-5686 | Houston, TX | carlozp08@gmail.com</p>
+            </div>
 
-        <h3>Projects</h3>
-        <p>
-            I've worked on several projects during my course, including a simple game built using Python 
-            and a website for a local business. I've also contributed to open-source projects on GitHub.
-        </p>
+            <!-- Profile Links -->
+            <div class="text-center my-4">
+                <a href="https://www.linkedin.com/in/carlozp08/" target="_blank">LinkedIn</a> | 
+                <a href="https://replit.com/@CarlosCarlos16" target="_blank">Replit</a> | 
+                <a href="https://github.com/carlozp08" target="_blank">GitHub</a>
+            </div>
+
+            <!-- Education -->
+            <section class="education">
+                <h3>Education</h3>
+                <p><strong>University of Houston - Clear Lake</strong> | Bachelor’s degree in Software Engineering | Expected August 2024</p>
+                <p><strong>San Jacinto College</strong> | Associates Degree in Computer Science | May 2023</p>
+                <p><strong>Career Technical High School</strong> | High School Diploma | June 2020</p>
+            </section>
+
+            <!-- Skills -->
+            <section class="skills">
+                <h3>Skills</h3>
+                <p>Leadership | Collaboration | Project Management | Technical Proficiency | Strategic Planning</p>
+            </section>
+
+            <!-- Projects -->
+            <section class="projects">
+                <h3>Projects</h3>
+                <h5>Academic Planner Tool</h5>
+                <p>A software application developed to optimize degree planning for students by providing an intuitive interface and efficient data management.</p>
+                <ul>
+                    <li>Developed "Student" and "Course" classes to manage student and course data seamlessly.</li>
+                    <li>Implemented the functionality to facilitate the addition of new students and courses, as well as seamless access to existing student and course records.</li>
+                    <li>Collaborated in a team to ensure timely project delivery and robust functionality.</li>
+                </ul>
+                <h5>Client Database System</h5>
+                <p>An application tailored to the efficient management and organization of client data for a retail store, delivered through an interactive interface.</p>
+                <ul>
+                    <li>Designed a structured "Client" class to store names, emails, and phone numbers.</li>
+                    <li>Created a menu-driven interface allowing effortless viewing and addition of clients.</li>
+                    <li>Utilized advanced input handling and validation techniques to ensure accurate data entry.</li>
+                </ul>
+            </section>
+
+            <!-- Experience -->
+            <section class="experience">
+                <h3>Experience</h3>
+                <h5>Operations Supervisor | May 2021 - Current</h5>
+                <p><strong>Amazon | Houston, TX</strong></p>
+                <ul>
+                    <li>Collaborated with senior management to enhance processes, elevating operational output and customer satisfaction.</li>
+                    <li>Directed and supervised a team of associates, ensuring the highest quality deliveries.</li>
+                    <li>Managed evaluations, training, and team coordination, contributing to team growth and department success.</li>
+                    <li>Surpassed performance goals through effective leadership and motivation.</li>
+                </ul>
+                <h5>Operations Intern | Aug. 2019 – May 2020</h5>
+                <p><strong>Marriott International, Inc | Houston, TX</strong></p>
+                <ul>
+                    <li>Collaborated on operations management, optimizing occupancy, rates, and expenses.</li>
+                    <li>Enhanced company profitability through strategic analysis and decision-making.</li>
+                    <li>Assessed Room's performance against budget, ensuring effective financial control.</li>
+                    <li>Monitored and managed Room operations' sales performance, driving revenue goals.</li>
+                </ul>
+                <h5>Shift Leader | Sep 2019 – May 2021</h5>
+                <p><strong>Whataburger | Houston, TX</strong></p>
+                <ul>
+                    <li>Supported seamless operations by fostering clear communication and collaboration between front-of-house and kitchen teams.</li>
+                    <li>Streamlined productivity by facilitating effective communication between cashiers and cooks.</li>
+                    <li>Skillfully managed customer interactions, transactions, and conflict resolutions.</li>
+                    <li>Enhanced customer service and verbal communication skills through proactive engagement.</li>
+                </ul>
+            </section>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        © 2023 Carlos. All rights reserved.
-    </footer>
-
-    <!-- JavaScript for Interactive Content -->
-    <script>
-        // We can add interactive JavaScript here in the future
-    </script>
+    <!-- Scripts -->
+    <script src="scripts.js"></script>
 </body>
 </html>
-<!-- ... (the beginning part of the document remains unchanged) -->
-
-<!-- Bootstrap Carousel -->
-<div class="container mt-4">
-    <div id="portfolioCarousel" class="carousel slide" data-ride="carousel">
-        <ul class="carousel-indicators">
-            <li data-target="#portfolioCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#portfolioCarousel" data-slide-to="1"></li>
-            <li data-target="#portfolioCarousel" data-slide-to="2"></li>
-        </ul>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="https://via.placeholder.com/800x400?text=Slide+1" alt="Slide 1">
-                <div class="carousel-caption">
-                    <h3>Project 1</h3>
-                    <p>Description of project 1.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="https://via.placeholder.com/800x400?text=Slide+2" alt="Slide 2">
-                <div class="carousel-caption">
-                    <h3>Project 2</h3>
-                    <p>Description of project 2.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="https://via.placeholder.com/800x400?text=Slide+3" alt="Slide 3">
-                <div class="carousel-caption">
-                    <h3>Project 3</h3>
-                    <p>Description of project 3.</p>
-                </div>
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#portfolioCarousel" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#portfolioCarousel" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </a>
-    </div>
-</div>
-
-<!-- ... (the rest of the document remains unchanged) -->
-
-<!-- JavaScript Dependencies for Bootstrap -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
-<!-- ... (the beginning part of the document remains unchanged) -->
-
-<!-- Resume Section -->
-<div class="container mt-4">
-    <h2>Resume</h2>
-
-    <!-- Header: Name & Contact Details -->
-    <div class="text-center my-4">
-        <h3>Carlos Perez</h3>
-        <p>(832)-955-5686 | Houston, TX | carlozp08@gmail.com</p>
-    </div>
-
-    <!-- Profile Links -->
-    <div class="text-center my-4">
-        <a href="https://www.linkedin.com/in/carlozp08/" target="_blank">LinkedIn</a> | 
-        <a href="https://replit.com/@CarlosCarlos16" target="_blank">Replit</a> | 
-        <a href="https://github.com/carlozp08" target="_blank">GitHub</a>
-    </div>
-
-    <!-- Education -->
-    <h4>Education</h4>
-    <ul>
-        <li>University of Houston - Clear Lake | Bachelor’s degree in Software Engineering (Expected August 2024)</li>
-        <li>San Jacinto College | Associates Degree in Computer Science (May 2023) - GPA: 3.4/4.0 – Dean’s Honor List</li>
-        <li>Career Technical High School | High School Diploma (June 2020)</li>
-    </ul>
-
-    <!-- Skills -->
-    <h4>Skills</h4>
-    <ul>
-        <li>Leadership</li>
-        <li>Collaboration</li>
-        <li>Project Management</li>
-        <li>Technical Proficiency</li>
-        <li>Strategic Planning</li>
-    </ul>
-
-    <!-- Projects -->
-    <h4>Projects</h4>
-    <h5>Academic Planner Tool</h5>
-    <p>A software application developed to optimize degree planning for students by providing an intuitive interface and efficient data management. Developed classes for students and courses, implemented functionality for data management, and collaborated in a team for project delivery.</p>
-
-    <h5>Client Database System</h5>
-    <p>An application tailored for efficient client data management for a retail store with an interactive interface. Designed structured data classes, created a user-friendly interface, and ensured accurate data entry through validation techniques.</p>
-
-    <!-- Experience -->
-    <h4>Experience</h4>
-    <h5>Operations Supervisor (May 2021 - Current) - Amazon, Houston, TX</h5>
-    <p>Collaborated with senior management to enhance operational processes, supervised a team of associates, managed team training, and surpassed performance goals.</p>
-
-    <h5>Operations Intern (Aug. 2019 – May 2020) - Marriott International, Inc, Houston, TX</h5>
-    <p>Participated in operations management, enhanced company profitability, assessed performance against budgets, and managed Room operations' sales performance.</p>
-
-    <h5>Shift Leader (Sep 2019 – May 2021) - Whataburger, Houston, TX</h5>
-    <p>Supported seamless operations, streamlined productivity, managed customer interactions, and enhanced communication skills.</p>
-</div>
-
-<!-- ... (the rest of the document remains unchanged) -->
