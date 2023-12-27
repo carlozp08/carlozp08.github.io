@@ -54,3 +54,33 @@ footer {
 }
 
 /* Add additional styling as needed */
+/* ... existing styles ... */
+
+.experience {
+    background: #fff;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.job h3 {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.job .date {
+    font-style: italic;
+    color: #666;
+}
+
+.job ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.job li {
+    background: url('bullet.png') no-repeat left center; /* replace with your bullet point image */
+    padding-left: 20px; /* adjust as needed */
+    margin-bottom: 0.5rem;
+}
+
+/* ... additional styles ... */
