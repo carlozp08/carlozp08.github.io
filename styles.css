@@ -1,81 +1,101 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
-.container {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+body {
+    background: #0a0a0a;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #333;
-    color: #151414;
-    height: 80px;
-}
-
-nav .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav h1 {
-    margin: 0;
-}
-
-nav p {
-    margin: 0;
-    font-style: italic;
-}
-
-/* Fade-in Animation for the Resume Section */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.container {
-    animation: fadeIn 2s ease-in-out;
-}
-
-/* Slide-in Animation for Projects */
-@keyframes slideIn {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
-h5 {
-    animation: slideIn 1s ease-out;
-}
-
-/* Hover Effect for Links */
-a:hover {
-    color: #007BFF;
-    transform: scale(1.05);
-    transition: all 0.3s ease-in-out;
-}
 html {
     scroll-behavior: smooth;
 }
-a:hover {
-    color: #444;
-    transition: color 0.3s ease;
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    text-align: center;
+    z-index: 10;
+}
+
+.navbar button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.navbar button:hover {
+    background: #555;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('images/rocket-bg.jpg') no-repeat center/cover;
+    /* Replace with your rocket sim or modeling pic if preferred */
+}
+
+.hero h1 {
+    font-size: 4rem;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+.section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #00ffcc;
+}
+
+.project-grid, .hobby-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card, .hobby-card {
+    background: #1a1a1a;
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.project-card:hover, .hobby-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card img, .hobby-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #111;
 }
