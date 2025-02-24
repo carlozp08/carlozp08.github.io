@@ -48,9 +48,8 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            background: url('carlos-model.jpg') no-repeat center/cover;
-            /* Replace 'carlos-model.jpg' with your uploaded modeling photo URL */
-            filter: brightness(70%);
+            background: url('rocket-bg.jpg') no-repeat center/cover;
+            /* Replace with your rocket sim or modeling pic if preferred */
         }
         .hero h1 {
             font-size: 4rem;
@@ -69,21 +68,21 @@
             margin-bottom: 2rem;
             color: #00ffcc;
         }
-        .project-grid, .hustle-grid {
+        .project-grid, .hobby-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
-        .project-card, .hustle-card {
+        .project-card, .hobby-card {
             background: #1a1a1a;
             padding: 1.5rem;
             border-radius: 10px;
             transition: transform 0.3s;
         }
-        .project-card:hover, .hustle-card:hover {
+        .project-card:hover, .hobby-card:hover {
             transform: translateY(-10px);
         }
-        .project-card img, .hustle-card img {
+        .project-card img, .hobby-card img {
             width: 100%;
             border-radius: 5px;
         }
@@ -103,12 +102,12 @@
 
     <section class="hero">
         <h1>Carlos Perez</h1>
-        <p>Computer Engineer & Model | Rocket Sim Builder | Delivery Ops Pro</p>
+        <p>Computer Engineer | Rocket Sim Builder | Model</p>
     </section>
 
     <section class="section" id="about">
         <h2>About Me</h2>
-        <p>A technically adept computer engineering student at UHCL, I’ve built rocket simulations and crushed delivery ops at Tesla and Amazon. I’m also a model with Neil Jou Agency, bringing confidence and style to the table. I’m here to kick ass in a full-time technical role—think cutting-edge systems and real-world impact.</p>
+        <p>A technically adept computer engineering student at UHCL, I’ve got hands-on experience building rocket simulations and optimizing delivery ops at Tesla and Amazon. I’m also slaying it as a model with Neil Jou Agency, bringing that same hustle to a full-time technical role—think cutting-edge systems and real-world impact.</p>
     </section>
 
     <section class="section" id="projects">
@@ -132,13 +131,13 @@
         </div>
     </section>
 
-    <section class="section" id="hustles">
-        <h2>Side Hustles</h2>
-        <div class="hustle-grid">
-            <div class="hustle-card">
-                <img src="carlos-model.jpg" alt="Modeling Shot">
+    <section class="section" id="hobbies">
+        <h2>Side Hustles & Hobbies</h2>
+        <div class="hobby-grid">
+            <div class="hobby-card">
+                <img src="carlos-model.jpg" alt="Carlos Modeling">
                 <h3>Modeling with Neil Jou Agency</h3>
-                <p>Rocking photoshoots and runways, 5’7”, dark brown hair, brown eyes. Bringing style and confidence to the game.</p>
+                <p>Flexing my look for Neil Jou Agency—5’7”, dark brown hair, brown eyes. Crushing it on the runway and in photoshoots while balancing tech projects.</p>
             </div>
         </div>
     </section>
@@ -148,19 +147,19 @@
         <p><strong>Education:</strong> B.S. Computer Engineering, UHCL (2024-2026) | A.S. Computer Science, San Jacinto (2021-2024)</p>
         <p><strong>Skills:</strong> Python, C++, SQL, Java | Simulation Design | Data Structures</p>
         <p><strong>Experience:</strong> Tesla (47% delivery boost) | Amazon (10% efficiency gain) | Marriott (7% bookings up)</p>
-        <p><strong>Side Hustles:</strong> Modeling with Neil Jou Agency, showcasing confidence and style.</p>
+        <p><strong>Side Hustles:</strong> Modeling with Neil Jou Agency, showcasing versatility and confidence.</p>
     </section>
 
     <section class="section resume" id="resume-customer" style="display: none;">
         <h2>Customer Resume</h2>
         <p><strong>Focus:</strong> Customer service and ops excellence at Tesla, Amazon, Marriott.</p>
         <p><strong>Skills:</strong> CRM, communication, team leadership.</p>
-        <p><strong>Side Hustles:</strong> Modeling with Neil Jou Agency, enhancing client engagement through confidence and style.</p>
+        <p><strong>Side Hustles:</strong> Modeling with Neil Jou Agency, enhancing client engagement and presence.</p>
     </section>
 
     <section class="section resume" id="resume-hybrid" style="display: none;">
         <h2>Hybrid Resume</h2>
-        <p><strong>Mix:</strong> Technical skills + customer service wins + modeling with Neil Jou Agency.</p>
+        <p><strong>Mix:</strong> Technical skills + customer service wins + modeling gigs.</p>
     </section>
 
     <footer>
@@ -168,51 +167,6 @@
     </footer>
 
     <script>
-        // Smooth auto-scroll with easing
-        let scrollSpeed = 2; // Adjust this for speed (1-5, lower is slower)
-        let lastScroll = 0;
-        let scrollTimeout;
-
-        window.addEventListener('scroll', () => {
-            clearTimeout(scrollTimeout);
-            const currentScroll = window.pageYOffset;
-            if (currentScroll > lastScroll) {
-                const targetScroll = currentScroll + (window.innerHeight * 0.1); // Scroll 10% of viewport height
-                smoothScrollTo(targetScroll);
-            }
-            lastScroll = currentScroll;
-
-            // Reset scroll if user stops
-            scrollTimeout = setTimeout(() => {
-                lastScroll = window.pageYOffset;
-            }, 100);
-        });
-
-        function smoothScrollTo(target, duration = 500) {
-            const start = window.pageYOffset;
-            const distance = target - start;
-            let startTime = null;
-
-            function animation(currentTime) {
-                if (startTime === null) startTime = currentTime;
-                const timeElapsed = currentTime - startTime;
-                const run = ease(timeElapsed, start, distance, duration);
-                window.scrollTo(0, run);
-                if (timeElapsed < duration) requestAnimationFrame(animation);
-            }
-
-            // Easing function for smooth motion
-            function ease(t, b, c, d) {
-                t /= d / 2;
-                if (t < 1) return c / 2 * t * t + b;
-                t--;
-                return -c / 2 * (t * (t - 2) - 1) + b;
-            }
-
-            requestAnimationFrame(animation);
-        }
-
-        // Resume toggle
         function showResume(type) {
             document.querySelectorAll('.resume').forEach(section => section.style.display = 'none');
             document.getElementById(`resume-${type}`).style.display = 'block';
