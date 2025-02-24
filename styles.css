@@ -2,12 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'SF Pro Display', 'Arial', sans-serif;
+    /* SF Pro Display is Apple’s font; fall back to Arial if not available */
 }
 
 body {
-    background: #0a0a0a;
-    color: #fff;
+    background: #fff;
+    color: #333;
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -20,24 +21,28 @@ html {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(255, 255, 255, 0.95);
     padding: 1rem;
     text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 10;
 }
 
 .navbar button {
-    background: #333;
-    color: #fff;
-    border: none;
+    background: #f5f5f7;
+    color: #333;
+    border: 1px solid #d2d2d7;
     padding: 0.5rem 1rem;
     margin: 0 1rem;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s, color 0.3s;
+    border-radius: 5px;
+    font-weight: 500;
 }
 
 .navbar button:hover {
-    background: #555;
+    background: #e5e5ea;
+    color: #000;
 }
 
 .hero {
@@ -47,17 +52,19 @@ html {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: url('images/rocket-bg.jpg') no-repeat center/cover;
-    /* Replace with your rocket sim or modeling pic if preferred */
+    background: url('images/rocket-bg-generated.jpg') no-repeat center/cover;
+    /* Placeholder for generated image */
 }
 
 .hero h1 {
     font-size: 4rem;
-    text-shadow: 2px 2px 4px #000;
+    color: #000;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
 }
 
 .hero p {
     font-size: 1.5rem;
+    color: #666;
 }
 
 .section {
@@ -69,7 +76,8 @@ html {
 .section h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    color: #00ffcc;
+    color: #0071e3;
+    /* Apple’s signature blue */
 }
 
 .project-grid, .hobby-grid {
@@ -79,14 +87,16 @@ html {
 }
 
 .project-card, .hobby-card {
-    background: #1a1a1a;
+    background: #f5f5f7;
     padding: 1.5rem;
     border-radius: 10px;
-    transition: transform 0.3s;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-card:hover, .hobby-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .project-card img, .hobby-card img {
@@ -97,5 +107,7 @@ html {
 footer {
     text-align: center;
     padding: 2rem;
-    background: #111;
+    background: #f5f5f7;
+    color: #666;
+    border-top: 1px solid #d2d2d7;
 }
