@@ -140,7 +140,6 @@
                 <h3>Modeling with Neil Jou Agency</h3>
                 <p>Rocking photoshoots and runways, 5’7”, dark brown hair, brown eyes. Bringing style and confidence to the game.</p>
             </div>
-            <!-- Add more hobbies/jobs here if you want -->
         </div>
     </section>
 
@@ -169,15 +168,51 @@
     </footer>
 
     <script>
+        // Smooth auto-scroll with easing
+        let scrollSpeed = 2; // Adjust this for speed (1-5, lower is slower)
         let lastScroll = 0;
+        let scrollTimeout;
+
         window.addEventListener('scroll', () => {
+            clearTimeout(scrollTimeout);
             const currentScroll = window.pageYOffset;
             if (currentScroll > lastScroll) {
-                window.scrollTo({ top: currentScroll + 50, behavior: 'smooth' });
+                const targetScroll = currentScroll + (window.innerHeight * 0.1); // Scroll 10% of viewport height
+                smoothScrollTo(targetScroll);
             }
             lastScroll = currentScroll;
+
+            // Reset scroll if user stops
+            scrollTimeout = setTimeout(() => {
+                lastScroll = window.pageYOffset;
+            }, 100);
         });
 
+        function smoothScrollTo(target, duration = 500) {
+            const start = window.pageYOffset;
+            const distance = target - start;
+            let startTime = null;
+
+            function animation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const run = ease(timeElapsed, start, distance, duration);
+                window.scrollTo(0, run);
+                if (timeElapsed < duration) requestAnimationFrame(animation);
+            }
+
+            // Easing function for smooth motion
+            function ease(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t + b;
+                t--;
+                return -c / 2 * (t * (t - 2) - 1) + b;
+            }
+
+            requestAnimationFrame(animation);
+        }
+
+        // Resume toggle
         function showResume(type) {
             document.querySelectorAll('.resume').forEach(section => section.style.display = 'none');
             document.getElementById(`resume-${type}`).style.display = 'block';
