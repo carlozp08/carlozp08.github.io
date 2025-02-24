@@ -3,4 +3,3 @@ function showResume(type) {
     document.getElementById(`resume-${type}`).style.display = 'block';
     window.scrollTo({ top: document.getElementById(`resume-${type}`).offsetTop - 100, behavior: 'smooth' });
 }
-// JavaScript content for future interactivity
