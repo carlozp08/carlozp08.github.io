@@ -3,107 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carlos Perez</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Carlos Perez | Computer Engineer & Model</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background: #0a0a0a;
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 1rem;
+            text-align: center;
+            z-index: 10;
+        }
+        .navbar button {
+            background: #333;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            margin: 0 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .navbar button:hover {
+            background: #555;
+        }
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: url('carlos-model.jpg') no-repeat center/cover;
+            /* Replace 'carlos-model.jpg' with your uploaded modeling photo URL */
+            filter: brightness(70%);
+        }
+        .hero h1 {
+            font-size: 4rem;
+            text-shadow: 2px 2px 4px #000;
+        }
+        .hero p {
+            font-size: 1.5rem;
+        }
+        .section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #00ffcc;
+        }
+        .project-grid, .hustle-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .project-card, .hustle-card {
+            background: #1a1a1a;
+            padding: 1.5rem;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .project-card:hover, .hustle-card:hover {
+            transform: translateY(-10px);
+        }
+        .project-card img, .hustle-card img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #111;
+        }
+    </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav>
-        <div class="container">
-            <h1>Carlos Perez</h1>
-            <p>Software Engineer</p>
-        </div>
-    </nav>
-
-    <!-- Main Content -->
-    <div class="container">
-        <!-- Introduction -->
-        <section>
-            <h2>About Me</h2>
-            <p>
-                Welcome to my personal website! I'm Carlos, a software engineering student with a passion for building intuitive and efficient software applications. Explore my projects, experiences, and skills below.
-            </p>
-        </section>
-
-        <!-- Resume Section -->
-        <section>
-            <h2>Resume</h2>
-            <div class="text-center my-4">
-                <h3>Carlos Perez</h3>
-                <p>(832)-955-5686 | Houston, TX | carlozp08@gmail.com</p>
-            </div>
-
-            <!-- Profile Links -->
-            <div class="text-center my-4">
-                <a href="https://www.linkedin.com/in/carlozp08/" target="_blank">LinkedIn</a> | 
-                <a href="https://replit.com/@CarlosCarlos16" target="_blank">Replit</a> | 
-                <a href="https://github.com/carlozp08" target="_blank">GitHub</a>
-            </div>
-
-            <!-- Education -->
-            <section class="education">
-                <h3>Education</h3>
-                <p><strong>University of Houston - Clear Lake</strong> | Bachelor’s degree in Software Engineering | Expected August 2024</p>
-                <p><strong>San Jacinto College</strong> | Associates Degree in Computer Science | May 2023</p>
-                <p><strong>Career Technical High School</strong> | High School Diploma | June 2020</p>
-            </section>
-
-            <!-- Skills -->
-            <section class="skills">
-                <h3>Skills</h3>
-                <p>Leadership | Collaboration | Project Management | Technical Proficiency | Strategic Planning</p>
-            </section>
-
-            <!-- Projects -->
-            <section class="projects">
-                <h3>Projects</h3>
-                <h5>Academic Planner Tool</h5>
-                <p>A software application developed to optimize degree planning for students by providing an intuitive interface and efficient data management.</p>
-                <ul>
-                    <li>Developed "Student" and "Course" classes to manage student and course data seamlessly.</li>
-                    <li>Implemented the functionality to facilitate the addition of new students and courses, as well as seamless access to existing student and course records.</li>
-                    <li>Collaborated in a team to ensure timely project delivery and robust functionality.</li>
-                </ul>
-                <h5>Client Database System</h5>
-                <p>An application tailored to the efficient management and organization of client data for a retail store, delivered through an interactive interface.</p>
-                <ul>
-                    <li>Designed a structured "Client" class to store names, emails, and phone numbers.</li>
-                    <li>Created a menu-driven interface allowing effortless viewing and addition of clients.</li>
-                    <li>Utilized advanced input handling and validation techniques to ensure accurate data entry.</li>
-                </ul>
-            </section>
-
-            <!-- Experience -->
-            <section class="experience">
-                <h3>Experience</h3>
-                <h5>Operations Supervisor | May 2021 - Current</h5>
-                <p><strong>Amazon | Houston, TX</strong></p>
-                <ul>
-                    <li>Collaborated with senior management to enhance processes, elevating operational output and customer satisfaction.</li>
-                    <li>Directed and supervised a team of associates, ensuring the highest quality deliveries.</li>
-                    <li>Managed evaluations, training, and team coordination, contributing to team growth and department success.</li>
-                    <li>Surpassed performance goals through effective leadership and motivation.</li>
-                </ul>
-                <h5>Operations Intern | Aug. 2019 – May 2020</h5>
-                <p><strong>Marriott International, Inc | Houston, TX</strong></p>
-                <ul>
-                    <li>Collaborated on operations management, optimizing occupancy, rates, and expenses.</li>
-                    <li>Enhanced company profitability through strategic analysis and decision-making.</li>
-                    <li>Assessed Room's performance against budget, ensuring effective financial control.</li>
-                    <li>Monitored and managed Room operations' sales performance, driving revenue goals.</li>
-                </ul>
-                <h5>Shift Leader | Sep 2019 – May 2021</h5>
-                <p><strong>Whataburger | Houston, TX</strong></p>
-                <ul>
-                    <li>Supported seamless operations by fostering clear communication and collaboration between front-of-house and kitchen teams.</li>
-                    <li>Streamlined productivity by facilitating effective communication between cashiers and cooks.</li>
-                    <li>Skillfully managed customer interactions, transactions, and conflict resolutions.</li>
-                    <li>Enhanced customer service and verbal communication skills through proactive engagement.</li>
-                </ul>
-            </section>
+    <div class="navbar">
+        <button onclick="showResume('technical')">Technical Resume</button>
+        <button onclick="showResume('customer')">Customer Resume</button>
+        <button onclick="showResume('hybrid')">Hybrid Resume</button>
     </div>
 
-    <!-- Scripts -->
-    <script src="scripts.js"></script>
+    <section class="hero">
+        <h1>Carlos Perez</h1>
+        <p>Computer Engineer & Model | Rocket Sim Builder | Delivery Ops Pro</p>
+    </section>
+
+    <section class="section" id="about">
+        <h2>About Me</h2>
+        <p>A technically adept computer engineering student at UHCL, I’ve built rocket simulations and crushed delivery ops at Tesla and Amazon. I’m also a model with Neil Jou Agency, bringing confidence and style to the table. I’m here to kick ass in a full-time technical role—think cutting-edge systems and real-world impact.</p>
+    </section>
+
+    <section class="section" id="projects">
+        <h2>Technical Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="rocket-launch.jpg" alt="Rocket Launch Sim">
+                <h3>Rocket Launch Trajectory</h3>
+                <p>Python sim calculating rocket paths—velocity, angles, wind resistance. Shit’s accurate.</p>
+            </div>
+            <div class="project-card">
+                <img src="rocket-descent.jpg" alt="Rocket Descent Sim">
+                <h3>Rocket Descent with Parachute</h3>
+                <p>C++ code for descent with auto-deployed chutes. Physics-driven and badass.</p>
+            </div>
+            <div class="project-card">
+                <img src="space-sim.jpg" alt="Space Exploration Sim">
+                <h3>Space Exploration Sim</h3>
+                <p>C++ resource management sim for space ops. Complex as fuck and fun to build.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="hustles">
+        <h2>Side Hustles</h2>
+        <div class="hustle-grid">
+            <div class="hustle-card">
+                <img src="carlos-model.jpg" alt="Modeling Shot">
+                <h3>Modeling with Neil Jou Agency</h3>
+                <p>Rocking photoshoots and runways, 5’7”, dark brown hair, brown eyes. Bringing style and confidence to the game.</p>
+            </div>
+            <!-- Add more hobbies/jobs here if you want -->
+        </div>
+    </section>
+
+    <section class="section resume" id="resume-technical">
+        <h2>Technical Resume</h2>
+        <p><strong>Education:</strong> B.S. Computer Engineering, UHCL (2024-2026) | A.S. Computer Science, San Jacinto (2021-2024)</p>
+        <p><strong>Skills:</strong> Python, C++, SQL, Java | Simulation Design | Data Structures</p>
+        <p><strong>Experience:</strong> Tesla (47% delivery boost) | Amazon (10% efficiency gain) | Marriott (7% bookings up)</p>
+        <p><strong>Side Hustles:</strong> Modeling with Neil Jou Agency, showcasing confidence and style.</p>
+    </section>
+
+    <section class="section resume" id="resume-customer" style="display: none;">
+        <h2>Customer Resume</h2>
+        <p><strong>Focus:</strong> Customer service and ops excellence at Tesla, Amazon, Marriott.</p>
+        <p><strong>Skills:</strong> CRM, communication, team leadership.</p>
+        <p><strong>Side Hustles:</strong> Modeling with Neil Jou Agency, enhancing client engagement through confidence and style.</p>
+    </section>
+
+    <section class="section resume" id="resume-hybrid" style="display: none;">
+        <h2>Hybrid Resume</h2>
+        <p><strong>Mix:</strong> Technical skills + customer service wins + modeling with Neil Jou Agency.</p>
+    </section>
+
+    <footer>
+        <p>Carlos Perez | carlozp08@gmail.com | (832) 955-5686 | linkedin.com/in/carlozp08</p>
+    </footer>
+
+    <script>
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > lastScroll) {
+                window.scrollTo({ top: currentScroll + 50, behavior: 'smooth' });
+            }
+            lastScroll = currentScroll;
+        });
+
+        function showResume(type) {
+            document.querySelectorAll('.resume').forEach(section => section.style.display = 'none');
+            document.getElementById(`resume-${type}`).style.display = 'block';
+            window.scrollTo({ top: document.getElementById(`resume-${type}`).offsetTop - 100, behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
